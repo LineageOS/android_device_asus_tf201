@@ -1,0 +1,395 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAARX//9/0\u003d",
+        "filename": "AutoParts/assets/qwerty-cs_CZ-qwerty.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/w\u003d",
+        "filename": "AutoParts/assets/qwerty-cs_CZ.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/s\u003d",
+        "filename": "AutoParts/assets/qwerty-da_DK.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/o\u003d",
+        "filename": "AutoParts/assets/qwerty-de_CH.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/8\u003d",
+        "filename": "AutoParts/assets/qwerty-de_DE.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry for key 44. Breaks swapping of Y/Z on German keyboards. Removing this line fixes it.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/k\u003d",
+        "filename": "AutoParts/assets/qwerty-el_GR.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/g\u003d",
+        "filename": "AutoParts/assets/qwerty-en_GR.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/c\u003d",
+        "filename": "AutoParts/assets/qwerty-es_ES.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/Y\u003d",
+        "filename": "AutoParts/assets/qwerty-fi_FI.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/U\u003d",
+        "filename": "AutoParts/assets/qwerty-fr_BE.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/Q\u003d",
+        "filename": "AutoParts/assets/qwerty-fr_CA.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/M\u003d",
+        "filename": "AutoParts/assets/qwerty-fr_CH.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/I\u003d",
+        "filename": "AutoParts/assets/qwerty-fr_FR.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/E\u003d",
+        "filename": "AutoParts/assets/qwerty-hu_HU.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9/A\u003d",
+        "filename": "AutoParts/assets/qwerty-it_CH.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+8\u003d",
+        "filename": "AutoParts/assets/qwerty-it_IT.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+4\u003d",
+        "filename": "AutoParts/assets/qwerty-nb_NO.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+0\u003d",
+        "filename": "AutoParts/assets/qwerty-nl_BE.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+w\u003d",
+        "filename": "AutoParts/assets/qwerty-pt_BR.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+s\u003d",
+        "filename": "AutoParts/assets/qwerty-pt_PT.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+o\u003d",
+        "filename": "AutoParts/assets/qwerty-sk_SK.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+k\u003d",
+        "filename": "AutoParts/assets/qwerty-sv_SE.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//9+g\u003d",
+        "filename": "AutoParts/assets/qwerty-tr_TR.kl",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 12
+      },
+      "writtenOn": "2012-03-25T14:39:41Z",
+      "side": 1,
+      "message": "Duplicate entry.",
+      "revId": "932dcf175f8a915ca89f5a430cd42d793352e994",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
