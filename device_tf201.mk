@@ -54,7 +54,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keychars/asusdec.kcm:system/usr/keychars/asusdec.kcm \
     $(LOCAL_PATH)/keylayout/asusdec.kl:system/usr/keylayout/asusdec.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl
+    $(LOCAL_PATH)/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
+    $(LOCAL_PATH)/prebuilt/51-cm-tf201-keys.sh:system/addon.d/51-cm-tf201-keys.sh
 
 # Camera/WiFi/BT Firmware
 PRODUCT_COPY_FILES += \
