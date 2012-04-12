@@ -100,7 +100,9 @@ PRODUCT_PACKAGES += \
         libaudioutils \
 	libinvensense_mpl \
         blobpack_tfp \
-        AutoParts_tfp
+        AutoParts_tfp \
+        com.cyanogenmod.asusdec \
+        libasusdec_jni
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
