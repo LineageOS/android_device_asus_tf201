@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl
 
+# Localized input keychars and keylayout files
+$(call inherit-product, $(LOCAL_PATH)/keychars/l10n/l10n.mk)
+$(call inherit-product, $(LOCAL_PATH)/keylayout/l10n/l10n.mk)
+
 # Camera/WiFi/BT Firmware
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/nvram_nh615.txt:system/etc/nvram_nh615.txt \
@@ -98,7 +102,9 @@ PRODUCT_PACKAGES += \
     libinvensense_mpl \
     blobpack_tfp \
     AutoParts_tfp \
-    mischelp
+    mischelp \
+    com.cyanogenmod.asusdec \
+    libasusdec_jni
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
