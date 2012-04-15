@@ -151,6 +151,5 @@
     <bool name="config_hasDockBattery">true</bool>
 
     <string name="config_deviceKeyHandlerLib">/system/framework/com.cyanogenmod.asusdec.jar</string>
-
-    <string name="config_deviceKeyHandlerClass">com.cyanogenmod.asusdec.AsusdecNative</string>
+    <string name="config_deviceKeyHandlerClass">com.cyanogenmod.asusdec.KeyHandler</string>
 </resources>

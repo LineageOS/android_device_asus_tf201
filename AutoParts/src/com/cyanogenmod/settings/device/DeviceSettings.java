@@ -1,3 +1,4 @@
+
 package com.cyanogenmod.settings.device;
 
 import java.io.File;
@@ -6,27 +7,33 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Locale;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.provider.Settings;
+import android.util.Log;
 import android.os.SystemProperties;
 
 public class DeviceSettings extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
+    private static final String TAG = "DeviceSettings";
 
+    public static final String L10N_PREFIX = "asusdec,asusdec-";
+
+    private static final String PREFS_FILE = "device_settings";
+    private static final String PREFS_LANG = "lang";
     private static final String PREFERENCE_KEYBOARD_LAYOUT = "keyboard_layout";
     private static final String PREFERENCE_CPU_MODE = "cpu_settings";
-    private static final int COPY_FILE_BUFFER_SIZE = 1024;
-
-    private static final String DATA_PREFIX = "/data/data/";
-    private static final String KEYBOARD_KCM_FILE = "asusdec.kcm";
-    private static final String KEYBOARD_KL_FILE = "asusdec.kl";
 
     private static final String CPU_PROPERTY = "sys.cpu.mode";
     private static final String KEYSWAP_PROPERTY = "sys.dockkeys.change";
@@ -39,7 +46,7 @@ public class DeviceSettings extends PreferenceActivity implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
         mKeyboardLayout = (ListPreference) getPreferenceScreen().findPreference(
-                        PREFERENCE_KEYBOARD_LAYOUT);
+                PREFERENCE_KEYBOARD_LAYOUT);
         mKeyboardLayout.setOnPreferenceChangeListener(this);
 
         String mCurrCpuMode = "1";
@@ -48,88 +55,66 @@ public class DeviceSettings extends PreferenceActivity implements
             mCurrCpuMode = SystemProperties.get(CPU_PROPERTY);
 
         mCpuMode = (ListPreference) getPreferenceScreen().findPreference(
-                    PREFERENCE_CPU_MODE);
+                PREFERENCE_CPU_MODE);
 
         mCpuMode.setValueIndex(getCpuModeOffser(mCurrCpuMode));
         mCpuMode.setOnPreferenceChangeListener(this);
     }
 
-    private String getDataDir() {
-        return DATA_PREFIX + getPackageName();
-    }
-
     private int getCpuModeOffser(String mode) {
         if (mode.equals("0"))
             return 0;
-                else if (mode.equals("2"))
+        else if (mode.equals("2"))
             return 2;
-                else
+        else
             return 1;
-    }
-
-    private void copyAsset (String fileIn, String fileOut) {
-        try {
-            InputStream inputStream = getAssets().open(fileIn);
-            OutputStream outputStream;
-
-            File outFile = new File(getDataDir(),fileOut);
-            outputStream = new FileOutputStream(outFile);
-            byte[] buffer = new byte[COPY_FILE_BUFFER_SIZE];
-            int length;
-
-            while ((length = inputStream.read(buffer)) > 0) {
-                outputStream.write(buffer, 0, length);
-            }
-
-            outputStream.close();
-            inputStream.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object value) {
         if (preference.equals(mKeyboardLayout)) {
             final String newLanguage = (String) value;
+            setNewKeyboardLanguage(getApplicationContext(), newLanguage);
 
-            AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle(R.string.warning)
-                    .setMessage(R.string.caution_keyboard_layout)
-                    .setPositiveButton(android.R.string.yes,
-                            new DialogInterface.OnClickListener() {
-
-                                public void onClick(DialogInterface dialog,
-                                        int which) {
-                                    setNewKeyboardLanguage(newLanguage);
-                                }
-                            }).setNegativeButton(android.R.string.no, null)
-                    .create();
-
-            dialog.show();
         } else if (preference.equals(mCpuMode)) {
+            final String newCpuMode = (String) value;
+            mCpuMode.setValueIndex(getCpuModeOffser(newCpuMode));
+            SystemProperties.set(CPU_PROPERTY, newCpuMode);
+        }
 
-                    final String newCpuMode = (String) value;
-
-                    mCpuMode.setValueIndex(getCpuModeOffser(newCpuMode));
-                    SystemProperties.set(CPU_PROPERTY, newCpuMode);
-                }
         return false;
     }
 
-    private void setNewKeyboardLanguage(String language) {
-        String keyboardKcm = language + ".kcm";
-        String keyboardKl = language + ".kl";
+    private static void setNewKeyboardLanguage(Context context, String language) {
+        Log.d(TAG, "Setting new keyboard layout to l10n variant " + language);
 
-        copyAsset(keyboardKcm, KEYBOARD_KCM_FILE);
-        copyAsset(keyboardKl, KEYBOARD_KL_FILE);
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_FILE,
+                Context.MODE_WORLD_READABLE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(PREFS_LANG, language);
+        editor.commit();
 
-        SystemProperties.set(KEYSWAP_PROPERTY, "1");
-        while(!SystemProperties.get(KEYSWAP_PROPERTY).equals("2")) {
+        String layout = L10N_PREFIX + language;
+        Settings.System.putString(context.getContentResolver(),
+                Settings.System.KEYLAYOUT_OVERRIDES, layout);
+    }
+
+    public static class BootCompletedReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction() != Intent.ACTION_BOOT_COMPLETED) {
+                return;
+            }
+
+            SharedPreferences prefs = context.getSharedPreferences(PREFS_FILE,
+                    Context.MODE_WORLD_READABLE);
+            String layout = prefs.getString(PREFS_LANG, "");
+
+            if (layout.equals("")) {
+                layout = Locale.getDefault().toString();
+                Log.d(TAG, "Setting default locale " + layout + " as keyboard layout");
+            }
+
+            setNewKeyboardLanguage(context, layout);
         }
-
-        PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-        pm.reboot("");
     }
 }
