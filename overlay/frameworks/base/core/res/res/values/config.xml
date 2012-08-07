@@ -253,4 +253,8 @@
          applied. -->
     <bool name="config_hasRemovableLid">true</bool>
 
+    <!-- Enable dock battery support -->
+
+    <bool name="config_hasDockBattery">true</bool>
+
 </resources>
