@@ -7,3 +7,5 @@
 /data           ext4            /dev/block/mmcblk0p8
 /boot           emmc            /dev/block/mmcblk0p10
 /recovery       emmc            /dev/block/mmcblk0p9
+/emmc           datamedia       /dev/null
+/sdcard         vfat            /dev/block/sda1            /dev/block/sda
