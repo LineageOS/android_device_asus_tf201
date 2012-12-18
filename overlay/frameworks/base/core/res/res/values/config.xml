@@ -201,12 +201,6 @@
         <item>0</item>
     </integer-array>
 
-    <!-- Package name providing network location support. -->
-    <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.location</string>
-
-    <!-- Package name providing geocoder API support. -->
-    <string name="config_geocodeProviderPackageName" translatable="false">com.google.android.location</string>
-
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface" translatable="false">wlan0</string>
 
@@ -238,6 +232,8 @@
          which typically is /data/data/com.android.providers.downloads/files -->
     <integer name="config_downloadDataDirSize">200</integer>
 
+    <integer name="config_downloadDataDirLowSpaceThreshold">10</integer>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -246,18 +242,10 @@
          movement threshold where scrolling should begin. -->
     <dimen name="config_viewConfigurationTouchSlop">12dp</dimen>
 
-    <!-- Path to the library that contains a device specific key handler -->
-    <string name="config_deviceKeyHandlerLib" translatable="false">/system/framework/com.cyanogenmod.asusdec.jar</string>
+    <integer name="db_connection_pool_size">3</integer>
 
-    <!-- Name of that key handler class -->
-    <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.asusdec.KeyHandler</string>
+    <integer name="config_cursorWindowSize">2048</integer>
 
-    <!-- Asus dock compatibility disabled by default -->
-    <bool name="config_hasDockBattery">true</bool>
-
-    <!-- If a dock provides a lid switch, that lid can be removed. This
-         setting is used to determine, whether lidOpenRotation has to be
-         applied. -->
-    <bool name="config_hasRemovableLid">true</bool>
+    <integer name="config_multiuserMaximumUsers">8</integer>
 
 </resources>
