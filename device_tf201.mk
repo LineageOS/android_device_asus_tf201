@@ -104,9 +104,7 @@ PRODUCT_PACKAGES += \
 
 # Build Some Extra Apps
 PRODUCT_PACKAGES += \
-    Torch \
-    com.cyanogenmod.asusdec \
-    libasusdec_jni
+    Torch
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
