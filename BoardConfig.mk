@@ -14,13 +14,15 @@
 # limitations under the License.
 #
 
-USE_PROPRIETARY_AUDIO_EXTENSIONS := true
 USE_CAMERA_STUB := false
 
 # inherit from the proprietary version
 -include vendor/asus/tf201/BoardConfigVendor.mk
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Legacy CFLAGS
+COMMON_GLOBAL_CFLAGS += -DMR0_AUDIO_BLOB 
 
 # Board nameing
 TARGET_NO_RADIOIMAGE := true
@@ -29,13 +31,14 @@ TARGET_BOOTLOADER_BOARD_NAME := cardhu
 
 # Target arch settings
 TARGET_NO_BOOTLOADER := true
+TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a9
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
-#ARCH_ARM_USE_NON_NEON_MEMCPY := true
+ARCH_ARM_USE_NON_NEON_MEMCPY := true
 
 # Avoid the generation of ldrcc instructions
 NEED_WORKAROUND_CORTEX_A9_745320 := true
@@ -46,19 +49,16 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 
 # EGL settings
+BOARD_EGL_NEEDS_LEGACY_FB := true
 BOARD_EGL_CFG := device/asus/tf201/prebuilt/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Misc display settings
 BOARD_USE_SKIA_LCDTEXT := true
-BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-
-#ICS Camera
-COMMON_GLOBAL_CFLAGS += -DICS_CAMERA_BLOB
 
 # Support for dock battery
 TARGET_HAS_DOCK_BATTERY := true
@@ -83,9 +83,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 29850022707
 BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
-# Audio Build Options
-BOARD_USES_GENERIC_AUDIO := false
-BOARD_USES_ALSA_AUDIO := false
 
 # Try to build the kernel
 TARGET_KERNEL_SOURCE := kernel/asus/tf201
