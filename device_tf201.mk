@@ -95,7 +95,6 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
     make_ext4fs \
     setup_fs \
-    audio.primary.cardhu \
     audio.a2dp.default \
     audio.usb.default \
     libaudioutils \
@@ -138,10 +137,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
-
-# audio mixer paths
-PRODUCT_COPY_FILES += \
-    device/asus/tf201/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # audio policy configuration
 PRODUCT_COPY_FILES += \
