@@ -59,6 +59,8 @@ BOARD_USE_SKIA_LCDTEXT := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf201/bluetooth/vnd_tf201.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/tf201/bluetooth
 
 # Support for dock battery
 TARGET_HAS_DOCK_BATTERY := true
